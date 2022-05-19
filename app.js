@@ -1,7 +1,7 @@
 const { Client, Intents } = require("discord.js");
 const { AudioPlayerStatus, VoiceConnectionStatus, createAudioPlayer, createAudioResource, joinVoiceChannel, getVoiceConnection } = require("@discordjs/voice");
 const { addSpeechEvent } = require("discord-speech-recognition");
-const { clientId, guildId, token } = require('./config.json');
+// const { clientId, guildId, token } = require('./config.json');
 const path = require('path');
 
 const responses = [
@@ -127,4 +127,4 @@ client.on("ready", () => {
   client.user.setActivity(" your every move.", {type: "WATCHING"})
 });
 
-client.login(token);
+client.login(process.env.Token);
